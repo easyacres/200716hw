@@ -4,6 +4,10 @@ body {
   line-height: 1;
 }
 
+.sBtn {
+    background-color: lightblue;
+}
+
 textarea{
   background: transparent;
   border: none;

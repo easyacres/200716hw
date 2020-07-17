@@ -1,22 +1,23 @@
 $(document).ready(function (){
+
+    var currentHdrTime = moment().format("LLLL");
+    $(".timeHdrDisplay").html(currentHdrTime) ;
+
     var saveBtn = $(".sBtn");
     saveBtn.on("click" , function(event) {
         event.preventDefault();
         var input = $(this).siblings(".form-control").val();
         var timeB = $(this).siblings().attr("id");
         
-        
-
-
         localStorage.setItem(timeB, input);
-        
+    
     })
-
 
     function hrUpdater () { 
         var currentTime = parseInt( moment().format("H"));
         // timeB === currentTime 
-        $(".input-group-text").each( function() {
+        $(".form-control").each( function() {
+            // $(".input-group-text").each( function() {
             var time = $(this).siblings().attr("id");
             if (time < currentTime) { 
                $(this).addClass("past")
@@ -37,81 +38,29 @@ $(document).ready(function (){
 
     hrUpdater();
 
-    $("#hr5").val(localStorage.getItem("17"))
-    // $("#hr6")
-
-    c
-    
-
-    
-    // console.log(currentTime);
-       {/* current time.  moment ..  */}
-    // var timeBlock = $(".timeBlock");
-    
-    // global var ... to chg classes purpose of..
-    
-    // added 
-    // var saveBtn = $(".input-group-text");
-    // . for the classs...
-    // 
-
-    //   timeBlock11am <== currentTime
-    
-
-
-
-    // timeBlock.each(function() {
-    //     var currentBlock = $(this);
-    //     console.log($(this));
-    //     // this grabs the HTML elemetn
-    //     var timeOfBlock = parseInt(currentBlock.attr("value"))
-    //     console.log("timeOfBlock: ", timeOfBlock);
-    //     if (timeOfBlock === currentTime) {
-    //         // present
-    //         console.log("present")
-    //         currentBlock.addClass("present").removeClass("past").removeClass("future");
-    
-    //         // added
-    
-    
-           
-    //         // a
-    // // 
-    
-    //         // console.log(currentTime, timeOfBlock)
-    //         // localStorage.getItem(input)
-    //         // localStorage.setItem(input)
-    //     } else if (timeOfBlock <= currentTime) {
-    //         // past
-    //         console.log("past")
-    //         currentBlock.addClass("past").removeClass("present").removeClass("future");
-    //     } else if (timeOfBlock >= currentTime) {
-    //         // future
-    //         console.log("future")
-    //         currentBlock.addClass("future").removeClass("present").removeClass("past");
-    //     }
-    
-    //     // Logic... comparing the integer values... string values.  
-        
-    
-
-
-
-    // }
-    //     );   
-
-
-
-
-
-
-
-    
-    // each is for loop.  Similar to iterates 1 at a time checklist tool..
-    
-    // ADD CLASS AND REMOVE CLASS...
-    
-    
-    // .each
-        
+    $("#hr1").val(localStorage.getItem("1"))
+    $("#hr2").val(localStorage.getItem("2"))
+    $("#hr3").val(localStorage.getItem("3"))
+    $("#hr4").val(localStorage.getItem("4"))
+    $("#hr5").val(localStorage.getItem("5"))
+    $("#hr6").val(localStorage.getItem("6"))
+    $("#hr7").val(localStorage.getItem("7"))
+    $("#hr8").val(localStorage.getItem("8"))
+    $("#hr9").val(localStorage.getItem("9"))
+    $("#hr10").val(localStorage.getItem("10"))
+    $("#hr11").val(localStorage.getItem("11"))
+    $("#hr12").val(localStorage.getItem("12"))
+    $("#hr13").val(localStorage.getItem("13"))
+    $("#hr14").val(localStorage.getItem("14"))
+    $("#hr15").val(localStorage.getItem("15"))
+    $("#hr16").val(localStorage.getItem("16"))
+    $("#hr17").val(localStorage.getItem("17"))
+    $("#hr18").val(localStorage.getItem("18"))
+    $("#hr19").val(localStorage.getItem("19"))
+    $("#hr20").val(localStorage.getItem("20"))
+    $("#hr21").val(localStorage.getItem("21"))
+    $("#hr22").val(localStorage.getItem("22"))
+    $("#hr23").val(localStorage.getItem("23"))
+    $("#hr24").val(localStorage.getItem("24"))
+      
 } )
